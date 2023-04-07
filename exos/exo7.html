@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exercice sur les formulaires</title>
+</head>
+<body>
+	<fieldset>
+		<legend>Ajout Produit</legend>
+		<form action="">
+			<span>inline1</span>&nbsp;&copy;<span>inline2</span>
+			<label for="">Nom</label>&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" readonly value="Bassirou" minlength="2" pattern="[a-zA-Z]+" required><br><br>
+			<label for="">Prix</label><br>
+			<input type="number" min="50" step="5" pattern="[a-zA-Z]+" required><br><br>
+			<label for="">CV</label><br>
+			<input type="file"><br><br>
+			<textarea name="" placeholder="Entrer une description" id="" cols="50" rows="5" ></textarea><br>
+			<label for="">Categorie</label><br><br>
+			<select name="" id="">
+				<option value="">Selectionner une categorie</option>
+				<option value="">Fruits</option>
+				<option value="">Legumes</option>
+			</select><br><br>
+			<label for="">Date de creation</label><br>
+			<input type="date"><br><br>
+			<label for="">Stock</label><br>
+			Dispo <input type="radio" name="stock">  Indispo <input type="radio" name="stock"><br><br>
+			<div align="right">
+				<button type="submit" disabled>Ajouter</button>
+				<button type="reset">Annuler</button>
+				<!-- <input type="submit" value="Ajouter" align="center">
+				<input type="reset" value="Annuler"> -->
+			</div>
+		</form>
+	</fieldset>
+</body>
+</html>
