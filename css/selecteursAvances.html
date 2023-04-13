@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Selecteur avance</title>
+	<style>
+		.p1, .p2, #ident{
+			background: orange;
+			margin-top: 10px;
+		}
+
+		.p1 > h1{
+			color: green;
+		}
+
+		#ident{
+			border: 5px outset green;
+		}
+
+		form label, form input{
+			display: block;
+			margin-top: 10px;
+		}
+
+		form input[type="Email"], form input[type="password"]{
+			width: 400px;
+			outline: none;
+			padding: 10px;
+			border-width: 1px;
+			border-style: solid;
+			border-radius: 10px;
+			border-color: gold;
+		}
+
+		form input[type="submit"]{
+			background: green;
+			color: white;
+			padding: 5px;
+			border: none;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+
+		form input[type="submit"]:hover{
+			background: lightgreen;
+			color: black;
+		}
+	</style>
+</head>
+<body>
+	<div class="p1">
+		je suis une division 1
+		<h1>Je suis un sous-titre</h1>
+	</div>
+	<div class="p2">Je suis une division 2</div>
+	<h1>Je suis un titre</h1>
+	<p id="ident">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+
+<fieldset>
+	<legend>Formulaire de connexion</legend>
+	<form action="">
+		<label for="">Email</label>
+		<input type="email" placeholder="Entrer votre email">
+		<label for="">Mot de passe</label>
+		<input type="password" placeholder="Entrer votre mot de passe">
+		<input type="submit" value="Se connecter">
+	</form>
+</fieldset>
+
+</body>
+</html>
