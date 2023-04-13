@@ -1,0 +1,27 @@
+#div2{
+	color: green;
+	font-size: 34px;
+	text-decoration: line-through;
+}
+
+#lien{
+			background: cyan;
+		}
+		.custom{
+			font-size: 32px;
+		}
+
+*{
+	border: 1px solid #000;
+}
+
+#p1{
+	color: yellow;
+}
+
+.para1{
+	color: red;
+}
+p{
+	color: blue;
+}
