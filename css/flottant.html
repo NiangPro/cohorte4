@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Les elements flottant</title>
+	<style>
+		ul li a{
+			text-decoration: none;
+			color: yellow;
+
+		}
+
+		ul{
+			list-style-type: none;
+			float: left;
+		}
+
+		ul li{
+			width: 100px;
+			text-align: center;
+			padding: 5px;
+			display: inline-block;
+			border-radius: 5px;
+			background: purple;
+			border-left: 5px double yellow;
+			border-top-left-radius: 30px;
+			border-right: 10px double yellow;
+			border-bottom-right-radius: 30px;
+			height: 30px;
+			line-height: 25px;
+			position: relative;
+
+		}
+
+		ul li:hover{
+			padding-left: 40px;
+			padding-right: 40px;
+/*			transform: scale(1.5,1.5);*/
+/*			transform: rotate(-15deg);*/
+			transition: 3s;
+		}
+
+		ul li ul{
+			visibility: hidden;
+			position: absolute;
+			top: 45px;
+			left: -70px;
+		}
+
+		ul li ul li{
+			margin-bottom: 10px;
+		}
+
+		ul li:hover ul{
+			visibility: visible;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a href="">Accueil</a></li>
+		<li><a href="">Apropos</a></li>
+		<li><a href="">Competences</a>
+			<ul>
+				<li><a href="">Developpement</a></li>
+				<li><a href="">Reseaux</a></li>
+				<li><a href="">Comptabilite</a></li>
+				<li><a href="">Medecine</a></li>
+			</ul>
+		</li>
+		<li><a href="">Formations</a></li>
+		<li><a href="">Contact</a></li>
+	</ul>
+</body>
+</html>

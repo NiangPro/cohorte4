@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulaire</title>
+	<style>
+		body{
+			background-color: #29fafa;
+		}
+		.card-form{
+			background-color: white;
+			width: 500px;
+			border-radius: 7px;
+			margin: auto;
+			padding: 14px 31px 33px 30px;
+		}
+
+		.input-text input{
+			width: 50%;
+		}
+
+		.input-text{
+			display: flex;
+		}
+
+		input{
+			padding: 13px;
+			width: 95%;
+			margin-bottom: 20px;
+			border-radius: 5px;
+		}
+
+		.input-check{
+			display: flex;
+			float: left;
+			width: 100%;
+		}
+
+		.input-check input{
+			width: 3%;
+    		margin-left: -2px;
+		}
+
+		input[type="submit"]{
+			color: white;
+			background-color: #2e91b5;
+			border: none;
+			border-radius: 5px;
+			padding: 13px;
+			width: 100%;
+		}
+
+		.img-1{
+			width: 100px;
+			height: 100px;
+		}
+		.img-2{
+			width: 88px;
+    		height: 86px;
+    		margin-top: 6px;
+			margin-left: 43px;
+
+		}
+		.img-3{
+			width: 68px;
+    		height: 66px;
+    		margin-top: 17px;
+    		margin-left: 69px;
+		}
+
+		.img-group{
+			display: flex;
+			justify-content: center;
+		}
+
+		.login{
+			margin-bottom: 50px;
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<div class="card-form">
+		<h1 align="center">Create an Account</h1>
+		<p align="center" class="login"> Already have an account? <a href="#">Login</a></p>
+		<form action="">
+			<div class="input-text">
+				<input type="text" placeholder="First Name"> &nbsp;&nbsp;&nbsp;&nbsp; 
+				<input type="text" placeholder="Last Name">
+			</div>
+			<div>
+				<input type="email" placeholder="Email">
+			</div>
+			<div>
+				<input type="password" placeholder="Password">
+			</div>
+			<div>
+				<input type="password" placeholder="Re-Type password">
+			</div>
+			<div class="input-check">
+				<input type="checkbox"> <span>I accept all the terms and conditions</span>
+			</div>
+			<div>
+				<input type="submit" value="Sign Up">
+			</div>
+			<p align="center"> -- or --</p>
+			<div class="img-group">
+				<img src="../../images/google.png" class="img-1" alt="">
+				<img src="../../images/github.png" class="img-2" alt="">
+				<img class="img-3" src="../../images/facebook.png" alt="">
+			</div>
+		</form>
+	</div>
+</body>
+</html>
