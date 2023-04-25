@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Correction de l'exercice sur les grilles</title>
+	<style>
+		#grilles{
+			padding: 10px;
+			margin: auto;
+			width: 900px;
+			height: 600px;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			row-gap: 10px;
+			column-gap: 30px;
+		}
+		.grille{
+			height: 250px;
+			border-radius: 10px;
+			box-shadow: 
+			3px 3px 5px #ccc, -3px -3px 5px #ccc;
+		}
+
+		.grille img{
+			height: 70%;
+			width: 100%;
+			border-bottom: 1px solid #000;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+		}
+
+		.grille h3{
+			text-align: center;
+			font-size: 24px;
+		}
+	</style>
+</head>
+<body>
+	<div id="grilles">
+		<div class="grille">
+			<img src="../../images/ananas.jpeg" alt="">
+			<h3>Ananas</h3>
+		</div>
+		<div class="grille">
+			<img src="../../images/fraise.jpeg" alt="">
+			<h3>&#128526; Fraise</h3>
+		</div>
+		<div class="grille">
+			<img src="../../images/kiwi.jpeg" alt="">
+			<h3>Kiwi</h3>
+		</div>
+		<div class="grille">
+			<img src="../../images/orange.jpeg" alt="">
+			<h3>Orange</h3>
+		</div>
+		<div class="grille">
+			<img src="../../images/poire.jpeg" alt="">
+			<h3>Poire</h3>
+		</div>
+		<div class="grille">
+			<img src="../../images/pomme.jpeg" alt="">
+			<h3>Pomme</h3>
+		</div>
+	</div>
+</body>
+</html>

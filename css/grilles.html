@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Les grilles</title>
+	<style>
+		form{
+			width: 600px;
+			height: 200px;
+			margin: auto;
+			border: 1px solid #000;
+			display: grid;
+			grid-template-columns: 1fr 2.fr;
+			column-gap: 10px;
+			padding: 10px;
+		}
+
+		form input{
+			height: 40px;
+		}
+	</style>
+</head>
+<body>
+	<form action="">
+		<input type="text" placeholder="Prenom">
+		<input type="text" placeholder="Nom">
+		<input type="text" placeholder="Adresse">
+		<input type="email" placeholder="Email">
+		<input type="password" placeholder="Mot de passe">
+	</form>
+</body>
+</html>
