@@ -1,0 +1,1 @@
+alert("Je suis un code javascript dans un fichier separe");

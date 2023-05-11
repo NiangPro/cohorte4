@@ -1,0 +1,29 @@
+#home{
+    border: 1px solid #000;
+    background:  linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.2)) ,url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#home p{
+    color: white;
+    font-family: "Algerian";
+    font-size: 38px;
+    text-shadow: 3px 3px 5px orange;
+}
+
+#home img{
+    width: 100%;
+    border-radius: 50%;
+    background: darkcyan;
+    border-top-right-radius: 0px;
+    border-right: 10px solid orange;
+}
+
+#home img:hover{
+    border-top-right-radius: 50%;
+    transition: 3s;
+    border-left: 10px solid orange;
+    background: cyan;
+}
