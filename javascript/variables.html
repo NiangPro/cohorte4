@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les variables en javascript</title>
+</head>
+<body>
+    <script>
+        // les differents types d'affichage 
+        // alert("Bonjour tout le monde");
+        // document.write(`Bonjour tout le monde <br>
+        //         je suis un titre en javascript
+        // `);
+
+        console.log("affichage  au niveau de la console");
+
+        // les variables 
+        let prenom = "Modou";
+        let nom = "NDIAYE";
+        let age = 34;
+
+        // constante 
+        const PI = 3.14;
+
+        let nomComplet = prenom+" "+nom;
+
+        document.write("Prenom : "+prenom);
+        document.write(`<br>Nom: ${nom}`);
+
+        let  newPrenom = prompt("Entrer votre prenom");
+
+        document.write(`Votre prenom est : ${newPrenom}`)
+        document.write('<br> Pi = '+PI);
+    </script>
+</body>
+</html>
