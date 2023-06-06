@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo selon cas</title>
+</head>
+<body>
+    <script>
+        let choix = prompt(`
+            ****** MENU PRINCIPAL ******
+            1. Sports
+            2. Couleur
+            3. Musique
+            FAITES VOTRE CHOIX
+        `);
+
+        switch (choix) {
+            case '1':
+                choix = prompt(`
+                    **** SPORTS *****
+                    a. Football
+                    b. Basketball
+                    FAITES VOTRE CHOIX
+                `);
+                switch (choix) {
+                    case 'a':
+                        choix = prompt(`
+                            **** FOOTBALL ****
+                            1. Homme
+                            2. Femme
+                            FAITES VOTRE CHOIX
+                        `);
+                        switch (choix) {
+                            case '1':
+                                alert("vous avez choisi homme")
+                                break;
+                            case '2':
+                                alert("vous avez choisi femme")
+                                break;
+                            default:
+                                alert("Choix indisponible");
+                                break;
+                        }
+                        break;
+                    case 'b':
+                        alert("Vous avez choisi basketball");
+                        break;
+                    default: 
+                        alert("Choix indisponible");
+                        break;
+                }
+                break;
+            case '2':
+                choix = prompt(`
+                        **** COULEUR ****
+                        1- Vert
+                        2- Orange
+                        FAITES VOITRE CHOIX
+                `);
+                switch (choix) {
+                    case '1':
+                        alert("Vous avez choisi la couleur verte");
+                        break;
+                    case '2':
+                        alert("Vous avez choisi la couleur orange");
+                        break;
+                    default:
+                        alert("Choix indisponible");
+                        break;
+                }
+                break;
+            case '3':
+                choix = prompt(`
+                    ***** MUSIQUE  ***
+                    a. Mbalax
+                    b. Raggae
+                    FAITES VOTRE CHOIX
+                `);
+                switch (choix) {
+                    case 'a':
+                        alert("Vous avez choisi mbalax");
+                        break;
+                    case 'b':
+                        alert("Vous avez choisi raggae");
+                        break;
+                    default:
+                        alert("CHoix indisponible");
+                        break;
+                }
+                break;
+            default:
+                alert("Choix indisponible");
+                break;
+        }
+    </script>
+</body>
+</html>

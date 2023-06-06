@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch-case</title>
+</head>
+<body>
+    <script>
+        let choix = prompt(`
+            *********** MENU ********** 
+            1 ---> Solde 
+            2 ---> Transfert 
+            3 ---> Achats 
+            4 ---> Jeux 
+            Faites votre choix
+        `);
+
+        switch(choix){
+            case '1': 
+                alert("Votre solde est de 20000000000 FCFA");
+                break;
+            default: 
+                alert("Choix non disponible");
+                break;
+        }
+    </script>
+</body>
+</html>
