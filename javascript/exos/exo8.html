@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre parfait ou premier</title>
+</head>
+<body>
+    <script>
+        //saisir un nombre entier
+        let nombre = parseInt(prompt("Entrer un nombre entier"));
+        // s'il est divisible par 1 et lui-meme (2 diviseurs)
+        // compter le nombre de diviseurs 
+        let compteur = 0;
+        for(let i = 1; i<=nombre; i++){
+            if (nombre % i == 0) {
+                // compteur = compteur + 1;
+                compteur++;
+                // compteur += 1;
+            }
+        }
+        //tester si le nombre de diviseurs est egal 2
+        if (compteur == 2 || nombre == 1) {
+            document.write(`${nombre} est un nombre premier`);
+        }else{
+            document.write(`${nombre} n'est pas un nombre premier`)
+        }
+
+        // la somme des diviseurs excepte lui-meme est egal a ce nombre
+        let somme = 0;
+        // recuperer les diviseurs
+        for (let i = 0; i < nombre; i++) {
+            if(nombre % i == 0){
+                // la somme des diviseurs 
+                // somme = somme +i;
+                somme += i;
+            }
+        }
+
+        // si la somme des diviseurs est egale a ce nombre 
+        if (nombre == somme) {
+            document.write(`<br>${nombre} est nombre parfait`);
+        }else{
+            document.write(`<br>${nombre} n'est pas un nombre parfait`);
+        }
+    </script>
+</body>
+</html>
