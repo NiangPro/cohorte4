@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les fonctions</title>
+</head>
+<body>
+    <script>
+        function bonjour(){
+            document.write("Bonjour tout le monde :) <br/>");
+        }
+
+        function direBonjour(prenom){
+            let message = `Bonjour ${prenom}`;
+            document.write(message);
+        }
+
+        function somme(a, b){
+            document.write(`${a} + ${b} = ${a+b}`);
+        }
+
+        function conversion(chaine){
+            return parseInt(chaine);
+            // return chaine;
+        }
+
+        // bonjour();
+
+        // let nom = prompt("Entrer votre prenom");
+        direBonjour("Modou");
+        // direBonjour(nom);
+        somme(12, 8);
+
+        let entier = conversion("5");
+        alert(typeof(entier));
+    </script>
+</body>
+</html>

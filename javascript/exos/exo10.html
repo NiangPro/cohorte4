@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparaisions de trois variables</title>
+</head>
+<body>
+    <script>
+        let val1 = parseInt(prompt("Entrer la premiere valeur"));
+        let val2 = parseInt(prompt("Entrer la deuxieme valeur"));
+        let val3 = parseInt(prompt("Entrer la troisieme valeur"));
+
+        let max, min, moy;
+
+        if(val1 >= val2){
+            if (val2 >= val3) {
+                max = val1;
+                moy = val2;
+                min = val3;
+            }else{
+                if(val1 >= val3){
+                    max = val1;
+                    moy = val3;
+                }else{
+                    max = val3;
+                    moy = val1;
+                }
+                min = val2;
+            }
+        }else{
+            if(val1 >= val3){
+                max = val2;
+                moy = val1;
+                min = val3;
+            }else{
+                if(val2 >= val3){
+                    max = val2;
+                    moy = val3;
+                }else{
+                    max = val3;
+                    moy = val2;
+                }
+                min = val1;
+            }
+        }
+
+        document.write(`${min} <= ${moy} <= ${max}`);
+    </script>
+</body>
+</html>
