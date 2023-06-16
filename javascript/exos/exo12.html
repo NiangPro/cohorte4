@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factoriel</title>
+</head>
+<body>
+    <script>
+        function factoriel(nombre){
+            let produit = 1;
+            let message = "";
+            for (let i = 1; i <= nombre; i++) {
+                // message += (i == 1)? i : "x"+i;
+                if (i == 1) {
+                    message = i;
+                } else {
+                    message += "x"+i;
+                }
+                produit *= i;
+            }
+
+            document.write(`${nombre}! = ${message} = ${produit}`)
+        }
+
+        let valeur = parseInt(prompt("Entrer une valeur entiere"));
+        factoriel(valeur);
+    </script>
+</body>
+</html>
