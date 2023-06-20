@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correction de l'exercice sur les fonctions</title>
+</head>
+<body>
+    <script>
+        const premiers = function(nombre){
+            for (let j = 1; j <= nombre; j++) {
+                let cpt = 0;
+                
+                for (let i = 1; i <= j; i++) {
+                    if (j % i == 0) {
+                        cpt++;
+                    }
+                }
+                
+                if (cpt == 2 || j == 1) {
+                    document.write(`${j} `);
+                }
+            }
+        }
+
+        let valeur = parseInt(prompt("Entrer un nombre"));
+        premiers(valeur);
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correction de l'exercice sur les tableaux</title>
+</head>
+<body>
+    <script>
+        let taille = parseInt(prompt("Entrer la taille du tableau"));
+        let tab = [];
+        // saisi du tableau 
+        for (let i = 0; i < taille; i++) {
+            tab.push(prompt(`Entrer la valeur ${i+1} du tableau`))
+        }
+        // affichage du tableau 
+        tab.forEach(val => document.write(`${val} `));
+    </script>
+</body>
+</html>

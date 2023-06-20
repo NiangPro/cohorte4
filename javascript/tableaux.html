@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les tableaux</title>
+</head>
+<body>
+    <script>
+        let tab = [];
+        let tab2 = Array();
+
+        let tabEntiers = [12, 4, 9, 0, -34];
+        let tabNoms = Array("Bassirou", "Demba", "Pathe", 12);
+
+        // length permet de connaitre la taille d'un tableau 
+        // alert(tabEntiers.length);
+
+        // les differents type de parcours d'un tableau 
+        // alert(tabNoms[1]);
+
+        // alert(tabNoms.at(0))
+
+        // alert(tabNoms[tabNoms.length - 1])
+
+        // for (let i = 0; i < tabNoms.length; i++) {
+        //     document.write(`${tabNoms[i]} - `)
+        // }
+
+        tabNoms.forEach((valeur, indice)=>{
+            document.write(`tab[${indice}] = ${valeur} <br />`)
+        });
+
+        tabNoms.forEach( (valeur) => {document.write(`${valeur} * <br />`)});
+        
+        tabNoms.forEach( valeur => document.write(`${valeur} * <br />`));
+
+        tabEntiers.forEach(function(valeur){
+            document.write(`${valeur} *** `)
+        })
+
+        // ajout en derniere position 
+        tabNoms.push("Sow");
+        // ajout en premiere position 
+        tabNoms.unshift("Massamba");
+
+        // suppression du premier element du tableau 
+        tabNoms.shift();
+        // suppression du dernier element du tableau
+        tabNoms.pop();
+        // inverser les elements du tableau 
+        tabNoms.reverse();
+        tabNoms.forEach(valeur => document.write(valeur + "  "));
+
+    </script>
+</body>
+</html>

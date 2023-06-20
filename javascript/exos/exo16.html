@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let taille = parseInt(prompt("Entrer la taille du tableau"))
+        let tab= [];
+        for (let i = 0; i < taille; i++) {
+            tab.push(parseInt(prompt("Entrer la valeur"+(i+1))));
+        }
+
+        document.write("Les nombres pairs du tableau sont : <br />");
+        tab.forEach(valeur => {
+            if (valeur % 2 == 0) {
+                document.write(valeur + " ")
+            }
+        })
+    </script>
+</body>
+</html>
