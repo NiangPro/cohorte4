@@ -7,6 +7,7 @@
 </head>
 <body>
     <script>
+        // declaration d'un tableau 
         let tab = [];
         let tab2 = Array();
 
@@ -49,9 +50,28 @@
         // suppression du dernier element du tableau
         tabNoms.pop();
         // inverser les elements du tableau 
-        tabNoms.reverse();
-        tabNoms.forEach(valeur => document.write(valeur + "  "));
+        tabNoms.reverse().forEach(valeur => document.write(valeur + "  "));
 
+        // trie croissant 
+        // tabEntiers.sort((a, b) => a- b);
+        // tri decroissant 
+        tabEntiers.sort((a, b) => b- a);
+        tabEntiers.forEach(valeur => document.write(valeur + " <= "));
+
+
+        // ajout 
+        tabNoms.splice(2, 0, "Aissatou");
+        // edition ou modification
+        tabNoms.splice(3, 1, "alioune")
+        //suppression
+        tabNoms.splice(2, 1);
+        tabNoms.splice(2, 0, "Modou");
+        tabNoms.splice(4, 0,"yama");
+        // extraire un sous tableau dans un tableau 
+        let ntab = tabNoms.slice(3);
+        tabNoms.forEach(val => document.write(val +" "))
+
+        document.write(ntab)
     </script>
 </body>
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les exercices sur les tableaux</title>
+</head>
+<body>
+    <script>
+        let taille = parseInt(prompt("Veuillez entrer la taille du tableau"))
+
+        let tab = [];
+
+        for (let i = 0; i < taille; i++) {
+            tab.push(prompt("Entrer la valeur "+(i+1)))           
+        }
+
+        document.write("Affichage avant decallage <br/>")
+        tab.forEach(val => document.write(val + '- '))
+
+        let tmp = tab[taille -1];
+        for (let i = taille -1; i >= 0; i--) {
+            tab[i] = tab[i-1];
+        }
+
+        tab[0] = tmp;
+
+        document.write("<br />Affichage apres decallage <br/>")
+        tab.forEach(val => document.write(val + '- '))
+    </script>
+</body>
+</html>
