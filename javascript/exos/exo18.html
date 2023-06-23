@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo sur les matrices</title>
+</head>
+<body>
+    <script>
+        let matrice = [];
+
+        let lignes = parseInt(prompt("Entrer le nombre de lignes de la matrice"))
+        let colonnes = parseInt(prompt("Entrer le nombre de colonnes de la matrice"))
+
+        for (let i = 0; i < lignes; i++) {
+            let tab = [];
+            for (let j = 0; j < colonnes; j++) {
+                tab.push(prompt("Entrer la valeur de la ligne "+(i+1)+" et colonne "+ (j+1)))
+            }
+            matrice.push(tab);
+        }
+
+        // for (let i = 0; i < matrice.length; i++) {
+        //     for (let j = 0; j < matrice[i].length; j++) {
+        //         document.write(matrice[i][j]+ " ")
+        //     }
+        //     document.write("<br />");
+        // }
+
+        matrice.forEach(tab => tab.sort((a, b) => a - b));
+
+        matrice.forEach((tab)=>{
+            tab.forEach(val =>document.write(val + " "));
+            document.write("<br/>")
+        })
+    </script>
+</body>
+</html>

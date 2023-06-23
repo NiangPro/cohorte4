@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrice</title>
+</head>
+<body>
+    <script>
+        // declarations 
+        let matrice = [], premiers = [], paires = [];
+        // saisi 
+        let lignes = parseInt(prompt("Entrer le nombre de lignes"));
+        let colonnes = parseInt(prompt("Entrer le nombre de colonnes"));
+
+        for (let i = 0; i < lignes; i++) {
+            let tab = [];
+            for (let j = 0; j < colonnes; j++) {
+                tab.push(prompt("Entrer la valeur de la ligne "+(i+1)+" et de colonne "+(j+1)))
+            }
+            matrice.push(tab);
+        }
+        // traitement 
+        matrice.forEach(tab => tab.forEach(val => {
+            let cpt = 0;
+            for (let i = 1; i <= val; i++) {
+                if(val % i == 0){
+                    cpt++;
+                }
+            }
+
+            if(cpt == 2 || val == 1){
+                premiers.push(val);
+            }
+
+            if(val % 2 == 0)
+                paires.push(val);
+        }))
+        // affichage 
+        function afficherLeTableau(tab, message){
+            document.write(message+"<br />");
+
+            document.write("<table border='1'>");
+                document.write("<tr>");
+                    tab.forEach(val => {
+                    document.write(`<td>${val}</td>`);
+                    })
+                document.write("</tr>");
+            document.write("</table>");
+        }
+
+        afficherLeTableau(premiers, "Le tableau des nombres premiers");
+        afficherLeTableau(paires, "Le tableau des nombres paires");
+    </script>
+</body>
+</html>
