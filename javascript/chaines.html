@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les chaines de caracteres en javascript</title>
+</head>
+<body>
+    <script>
+        let chaine = "Ma chaine de caracteres";
+        let prenom = prompt("Entrer votre prenom");
+        let nom = 'diallo';
+        // la taille 
+        window.alert(chaine.length);
+        //parcours direct
+        let dernierCaractere = chaine.charAt(chaine.length -1);
+        window.document.write(dernierCaractere);
+        document.writeln(chaine[0]+"<br>"); 
+        // parcours complet 
+        for (let i = 0; i < chaine.length; i++) {
+            document.write(chaine[i]+"*");
+        }
+
+        // concatenation 
+        // prenom = prenom.concat(nom);
+        let nomcomplet= prenom+" " +nom;
+        document.write("<br>"+nomcomplet)
+
+        // commence par et termine par 
+        // prenom.toLowerCase()
+        // prenom.toUpperCase();
+        // prenom.endsWith()
+        let search = " Bassirou    ";
+        // newprenom = prenom.toLowerCase();
+        if(prenom.toLowerCase().startsWith("aliou".toLowerCase())){
+            document.write("exact")
+        }else{
+            document.write("erreur")
+        }
+
+        // document.write(prenom.padStart(4, "x"))
+        document.write(search.trim().length)
+
+    //    document.write(search.trim().substr(0,4));
+    //    document.write(search.trim().substr(4));
+       document.write(search.trim().repeat(4));
+    //    document.write(search.trim().replace("s", "p"));
+       document.write(search.trim().replaceAll("s", "p"));
+       document.write(search.trim().includes("m"));
+
+
+
+    </script>
+</body>
+</html>

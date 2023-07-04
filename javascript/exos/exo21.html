@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let chaine = prompt("veuiller saisir une chaine de caractere");
+        let tab =[];
+
+        for (let i = 0; i < chaine.toLowerCase().length; i++) {
+            if(chaine.charAt(i) == 'a' || chaine.charAt(i) == 'e' || chaine.charAt(i) == 'o' || chaine.charAt(i) == 'u' || chaine.charAt(i) == 'i' || chaine.charAt(i) == 'y'){
+                tab.push(chaine.charAt(i));
+            }
+        }
+        document.write("La chaine "+ chaine +"<br>");
+        tab.forEach(element => {
+            document.write(element+" - ")
+        });
+        
+    </script>
+</body>
+</html>

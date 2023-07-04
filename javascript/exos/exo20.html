@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correction de l'exercice</title>
+</head>
+<body>
+    <script>
+        let tel = prompt("Entrer un numero telephone");
+
+        let premiers = tel.substr(0, 4).padEnd(7, "x");
+        let derniers = tel.substring(tel.length - 2);
+
+        let num = premiers+derniers;
+
+        document.write(num);
+    </script>
+</body>
+</html>
