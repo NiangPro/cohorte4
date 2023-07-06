@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integration du Html</title>
+
+    <style>
+        .myclass{
+            border: 1px solid #000;
+            border-radius: 15px;
+            background-color: teal;
+        }
+
+        .ourclass{
+            padding: 10px;
+            box-shadow: 3px 3px 5px teal;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://youtube.com" id="lien">
+        Cliquer pour surfer sur <strong id="gras">youtube</strong> 
+    </a>
+    <div class="ourclass" id="para">Ma division</div>
+    <p class="myclass">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit optio, perferendis quia ab nemo, quo sed harum voluptate facere quod officiis? Recusandae totam provident libero molestias rem quaerat nihil adipisci!</p>
+    <button id="btn">Cliquez-moi</button>
+    <script>
+        console.log(window);
+        console.log(document);
+
+        let lien = document.getElementById("lien");
+        let classes = document.getElementsByClassName("myclass");
+        let para = document.getElementById("para");
+
+        // lien.innerHTML = "changement";
+        lien.href = "google"
+        lien.setAttribute("href", "sunucode")
+        lien.target = "_blank"
+
+        console.log(lien.innerText);
+        console.log(lien.innerHTML);
+        console.log(lien.href);
+        console.log(classes[0].innerHTML);
+        
+        let btn = document.getElementById("btn");
+        
+        let tab = para.className.split(" ");
+        tab.push("myclass")
+        para.className = tab.join(" ")
+
+        let gras = document.getElementById("gras");
+
+        console.log(lien.getAttribute("href"));
+        console.log(typeof para.className);
+        console.log(gras.parentNode.innerText);
+        
+        btn.addEventListener("click", function(){
+            lien.innerText = "Changement"
+        })
+    </script>
+</body>
+</html>
