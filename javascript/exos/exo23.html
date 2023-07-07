@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="global"></div>
+    <script>
+        let global = document.getElementById("global")
+        let lien = document.createElement("a");
+        lien.href = "#";
+        lien.target = "_blank"
+        lien.appendChild(document.createTextNode("Mon lien"))
+        global.appendChild(lien);
+        let h3 = document.createElement("h3");
+        h3.appendChild(document.createTextNode("Mon titre"))
+        global.appendChild(h3)
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integration ou manipulation du html</title>
+    <style>
+        .carre{
+            border: 1px solid #000;
+            padding: 10px;
+        }
+
+        .bleu{
+            background: blue;
+        }
+
+        .orange{
+            background: orange;
+        }
+    </style>
+</head>
+<div id="conteneur" class="carre bleu">
+    <span id="span1">Lorem ipsum dolor sit amet.</span><a href="" id="lien">Mon lien</a><span>Lorem, ipsum dolor.</span>
+</div>
+<button id="bleu">Bleu</button>
+<button id="orange">Orange</button>
+<body>
+    <script>
+        let conteneur = document.getElementById("conteneur")
+        let bleu = document.getElementById("bleu")
+        let orange = document.getElementById("orange")
+        let lien = document.getElementById("lien")
+
+
+        let h1 = document.createElement("h1");
+        // let contenu1 = document.createTextNode("Mon titre");
+        // h1.appendChild(contenu1);
+        h1.appendChild(document.createTextNode("Mon titre 1"))
+        // conteneur.appendChild(h1);
+        conteneur.insertBefore(h1, document.getElementById("span1"))
+
+        console.log(lien.nextSibling);
+        console.log(lien.previousSibling);
+        orange.addEventListener("click", function(){
+            conteneur.classList.remove("bleu");
+            conteneur.classList.add("orange");
+             orange.disabled = true;
+             bleu.disabled = false;
+        })
+
+        bleu.addEventListener("click", function(){
+            conteneur.classList.remove("orange");
+            conteneur.classList.add("bleu");
+            orange.disabled = false;
+             bleu.disabled = true;
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les formulaires en javascript</title>
+</head>
+<body>
+    <form action="" id="form">
+        <label for="">Prenom: </label><br>
+        <input type="text" name="prenom" id="prenom"><br>
+        <label for="">Nom: </label><br>
+        <input type="text" name="nom" id="nom"><br>
+        <label for="">Tel: </label><br>
+        <input type="text" name="tel" id="tel"><br>
+        <label for="">Sexe: </label><br>
+        M<input type="radio" value="Masculin" name="sexe"> F <input type="radio" name="sexe" value="Feminin"><br>
+        <label for="">Pays</label> <br>
+        <Select id="pays">
+            <option value="Senegal">Senegal</option>
+            <option value="Mali">Mali</option>
+            <option value="Burundi">Burundi</option>
+            <option value="Togo">Togo</option>
+        </Select>
+        <button type="submit" id="send">Ajouter</button>
+    </form>
+    <script>
+        let prenom = document.getElementById("prenom");
+        let nom = document.getElementById("nom");
+        let tel = document.getElementById("tel");
+        let sexe = document.getElementsByName("sexe");
+        let pays = document.getElementById("pays");
+        let btn = document.getElementById("send");
+        let form = document.getElementById("form");
+
+        prenom.addEventListener("mouseleave", function(e){
+            console.log(prenom.value);
+            // console.log(e.target.value);
+            if (prenom.value.length > 0) {
+                nom.value ="Niang"
+                // nom.readOnly = true
+                nom.disabled = true
+                tel.focus();
+            }else{
+                nom.value = ""
+                prenom.focus()
+            }
+            
+        })
+
+        btn.addEventListener("click", (e)=>{
+            for (let i = 0; i < sexe.length; i++) {
+                if(sexe[i].checked){
+                    console.log(sexe[i].value);
+                }
+            }
+            e.preventDefault();
+        })
+
+    </script>
+</body>
+</html>
