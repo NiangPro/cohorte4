@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire en javascript</title>
+</head>
+<body>
+    
+    <form action="" id="form">
+        <label for="">Prenom </label><br>
+        <input type="text" id="prenom"><br>
+        <label for="">Nom </label><br>
+        <input type="text" id="nom"><br>
+        <label for="">Sexe </label><br>
+        M<input type="radio" name="sexe" checked value="homme">
+        F<input type="radio" name="sexe" value="femme"><br>
+        <label for="">Pays</label><br>
+        <select name="pays" id="pays">
+            <option value="Senegal">Senegal</option>
+            <option value="Cote d'ivoire">Cote d'ivoire</option>
+            <option value="Mali">Mali</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Burundi">Burundi</option>
+        </select><br>
+    </form>
+    <script>
+        // les variables 
+        let form = document.getElementById("form");
+        let prenom = document.getElementById("prenom");
+        let nom = document.getElementById("nom")
+        let sexe = document.getElementsByName("sexe")
+        let pays = document.getElementById("pays")
+        
+        
+
+        let btn = document.createElement("button");
+
+        // btn.setAttribute("type", "submit");
+        let textBtn = document.createTextNode("Ajouter");
+        btn.type = "submit";
+        btn.appendChild(textBtn);
+
+        form.appendChild(btn);
+        // form.insertBefore(btn, prenom);
+
+        prenom.addEventListener("change", function () {
+            console.log(prenom.value);
+            // nom.focus();
+            nom.value = "Niang";
+            // nom.readOnly = true
+            nom.disabled = true
+        })
+
+        // btn.addEventListener("click", function(even){
+        //     // for (let i = 0; i < sexe.length; i++) {
+        //     //     if(sexe[i].checked == true){
+        //     //         console.log(sexe[i].value);
+        //     //     }
+        //     // }
+
+        //     let sexeChecked = sexe[0].checked == true ? sexe[0].value : sexe[1].value
+        //     console.log(sexeChecked);
+        //     console.log(pays.options[pays.selectedIndex].value);
+        //     even.preventDefault();
+        // })
+
+        form.addEventListener("submit", (e)=>{
+
+            let sexeChecked = sexe[0].checked == true ? sexe[0].value : sexe[1].value
+            console.log(`
+                ${prenom.value} 
+                ${nom.value} 
+                ${sexeChecked}
+                ${pays.options[pays.selectedIndex].value}
+            `);
+            e.preventDefault();
+        })
+    </script>
+</body>
+</html>
